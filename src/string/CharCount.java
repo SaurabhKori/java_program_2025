@@ -12,7 +12,6 @@ import java.util.Set;
 public class CharCount {
 // Ist way 
 	public static Map<Character, Integer> charCount(String data) {
-
 		List<Character> list = new ArrayList<>();
 		for (char c : data.toCharArray())
 			list.add(c);
@@ -25,7 +24,6 @@ public class CharCount {
 				if (object == object2) {
 					++count;
 				}
-
 			}
 			map.put(object, count);
 		}
@@ -38,7 +36,6 @@ public class CharCount {
 			m.put(c, m.getOrDefault(c, 0) + 1);
 		return m;
 	}
-
 	public static void main(String[] args) {
 		System.out.println(charCount1("Saurabh"));
 	}
