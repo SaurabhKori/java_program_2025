@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-//Count occurrences of each character
+//Count occurrences of each character hello df
 public class CharCount {
 // Ist way 
 	public static Map<Character, Integer> charCount(String data) {
