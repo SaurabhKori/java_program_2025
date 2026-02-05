@@ -1,5 +1,8 @@
 package string;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 //Find the highest occurring character
 public class HighestOccurenceOfCharacter {
 	public static Character highestOccurringChar(String s) {
@@ -16,7 +19,23 @@ public class HighestOccurenceOfCharacter {
 		return ch;
 	}
 
+	public static Character highestOccurrigChar1(String s) {
+		Map<Character, Integer> maps = new LinkedHashMap<>();
+		 for(Character ch:s.toCharArray())
+			maps.put(ch, maps.getOrDefault(ch, 0) + 1);
+
+		int max = 0;
+		char result = 0;
+		for (Map.Entry<Character, Integer> entry : maps.entrySet()) {
+			if (max < entry.getValue()) {
+				max = entry.getValue();
+				result = entry.getKey();
+			}
+		}
+		return result;
+	}
+
 	public static void main(String[] args) {
-		System.out.println(highestOccurringChar("Saurabh"));
+		System.out.println(highestOccurrigChar1("Saurabh"));
 	}
 }
