@@ -7,4 +7,5 @@ public interface Child extends Parent {
 
 	default void sayOk() {
 	};
+	
 }
